@@ -37,7 +37,14 @@ public class UI extends JPanel implements ActionListener{
       } */
   
       // apple
-      g.drawImage(controller.appleIcon, controller.apple[0], controller.apple[1], Controller.UNIT, Controller.UNIT, null);
+      g.drawImage(
+        controller.appleIcon, 
+        controller.apple[0], 
+        controller.apple[1], 
+        Controller.UNIT, 
+        Controller.UNIT, 
+        null
+      );
   
   
       // snake
@@ -45,7 +52,12 @@ public class UI extends JPanel implements ActionListener{
         if(i == 0){
           g.setColor(Color.GREEN);
         }else{
-          g.setColor(new Color(controller.random.nextInt(255),controller.random.nextInt(255),controller.random.nextInt(255)));
+          g.setColor(new Color(
+            controller.random.nextInt(255),
+            controller.random.nextInt(255),
+            controller.random.nextInt(255)
+            )
+          );
         }
         g.fillRect(controller.x[i], controller.y[i], Controller.UNIT, Controller.UNIT);
       }
